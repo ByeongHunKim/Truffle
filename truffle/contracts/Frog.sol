@@ -11,9 +11,11 @@ contract Frog is ERC721URIStorage, Ownable {
     Counters.Counter private _tokenIds;
 
     string private _customBaseURI;
+    uint256 private _price;
 
     constructor(string memory customBaseURI_) ERC721("RandomNFT", "YGBS") {
         _customBaseURI = customBaseURI_;
+        _price = 0.05 ether;
         
     }
 
@@ -24,6 +26,8 @@ contract Frog is ERC721URIStorage, Ownable {
 
     function purchase(uint256 quantity) public payable returns (uint256)
     {   
+        require(msg.value >= _price, "Not enough ETH sent");
+        payable(owner()).transfer(_price);
         _tokenIds.increment();
 
         uint256 newItemId = _tokenIds.current();
