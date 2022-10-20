@@ -1,0 +1,75 @@
+{
+  "contractName": "Frog",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Frog.sol\":\"Frog\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Frog.sol\":{\"keccak256\":\"0x78ad5c0ded3ef36947b804a759a8dd0e078bc397ab6f1022ee144e5b883f7ade\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5e7cd1b585546d9ac96b78e9b2c0d89b3573dd1df1ba12f492f7c418563d9a2d\",\"dweb:/ipfs/QmQZmNDsf579oApD34LAqgn9eTvR5u36ntah4DUkwe9M2H\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212204ce84a02f7866b1ffa98ea1c364a3a4ba77136be4ffea8875996791e13d71e3764736f6c634300080e0033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212204ce84a02f7866b1ffa98ea1c364a3a4ba77136be4ffea8875996791e13d71e3764736f6c634300080e0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "60:24:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "60:24:0:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract Frog {\r\n    \r\n}\r\n",
+  "sourcePath": "C:\\Users\\PC\\Documents\\NFT_truffle\\truffle\\contracts\\Frog.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Frog.sol",
+    "exportedSymbols": {
+      "Frog": [
+        2
+      ]
+    },
+    "id": 3,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Frog",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "Frog",
+        "nameLocation": "69:4:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3,
+        "src": "60:24:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:53:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.14+commit.80d49f37.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.10",
+  "updatedAt": "2022-10-19T05:32:20.998Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
