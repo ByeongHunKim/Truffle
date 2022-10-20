@@ -12,11 +12,12 @@ contract Frog is ERC721URIStorage, Ownable {
 
     string private _customBaseURI;
     uint256 private _price;
+    uint256 private _maxMintable;
 
     constructor(string memory customBaseURI_) ERC721("RandomNFT", "YGBS") {
         _customBaseURI = customBaseURI_;
         _price = 0.05 ether;
-        
+        _maxMintable = 20;
     }
 
     function setBaseURI(string memory customBaseURI_) public onlyOwner
@@ -24,16 +25,25 @@ contract Frog is ERC721URIStorage, Ownable {
         _customBaseURI = customBaseURI_;
     }
 
-    function purchase(uint256 quantity) public payable returns (uint256)
+    function purchase(uint256 quantity) public payable
     {   
-        require(msg.value >= _price, "Not enough ETH sent");
-        payable(owner()).transfer(_price);
+        require(msg.value >= (_price * quantity), "Not enough ETH sent");
+        require(quantity <= 10, "Can't mint more than 10.");
+        
+        payable(owner()).transfer(_price * quantity);
+        for(uint i =0; i < quantity; i++)
+        {
+            mintForPurchase(msg.sender);
+        }
+    }
+
+    function mintForPurchase(address recipient) private 
+    {   
         _tokenIds.increment();
+        require(_tokenIds.current() <= _maxMintable, "Project is finished minting");
 
         uint256 newItemId = _tokenIds.current();
-        _mint(msg.sender, newItemId);
-
-        return newItemId;
+        _mint(recipient, newItemId);
     }
 
     function _baseURI() internal view virtual override returns(string memory)
